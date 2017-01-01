@@ -2,7 +2,9 @@ package goldenfoods.items;
 
 import goldenfoods.registry.ModCreativeTab;
 import goldenfoods.world.gen.AppleTree;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -22,10 +24,13 @@ public class AppleSeed extends Item
 
 	public boolean onItemUse(ItemStack itemStack, EntityPlayer entity, World world, int i, int j, int k, int l, float a, float b, float c)
 	{
-		float var4 = 1.0F;
+		Block block = world.getBlock(i, j, k);
 
-		appleTree.generateSurface(world, i, j, k);
-		--itemStack.stackSize;
+		if(block == Blocks.grass || block == Blocks.dirt)
+		{
+			appleTree.generateSurface(world, i, j, k);
+			--itemStack.stackSize;
+		}
 
 		return true;
 	}

@@ -56,6 +56,13 @@ public class ModRecipe
 				'A', Items.golden_apple
 				);
 
+		GameRegistry.addRecipe(new ItemStack(ModItem.ultimateMagicGoldenApple, 1),
+				"GGG",
+				"GGG",
+				"GGG",
+				'G', ModItem.magicGoldenApple
+				);
+
 		GameRegistry.addRecipe(new ItemStack(ModItem.gpldenAppleJuice, 1),
 				"SSS",
 				"AAA",
@@ -121,6 +128,15 @@ public class ModRecipe
 				"  A",
 				"  S",
 				'A', ModItem.magicGoldenApple,
+				'S', Items.stick
+				);
+
+		GameRegistry.addRecipe(new ItemStack(ModItem.ultimateGoldenAppleSword, 1),
+				"DAD",
+				"DAD",
+				" S ",
+				'A', ModItem.ultimateMagicGoldenApple,
+				'D', Items.diamond,
 				'S', Items.stick
 				);
 	}

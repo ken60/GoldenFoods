@@ -13,7 +13,7 @@ public class GoldenFoodsMOD
 {
 	public static final String MOD_ID = "goldenfoods";
 	public static final String MODNAME = "GoldenFoods Mod";
-	public static final String VERSION = "0.1.1";
+	public static final String VERSION = "1.0.0";
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent e)
